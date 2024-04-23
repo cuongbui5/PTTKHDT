@@ -3,6 +3,7 @@ package src.model;
 public class OrderItem {
     private int id;
     private Product product;
+
     private int quantity;
     private double total;
 
@@ -10,6 +11,23 @@ public class OrderItem {
         this.product = product;
         this.quantity = quantity;
         this.total = total;
+    }
+
+    public OrderItem(int id) {
+        this.id = id;
+    }
+    public void calcTotal(){
+        total=quantity*product.getPrice();
+    }
+
+    @Override
+    public String toString() {
+        return "OrderItem{" +
+                "id=" + id +
+                ", product=" + product.getName() +
+                ", quantity=" + quantity +
+                ", total=" + total +
+                '}';
     }
 
     public int getId() {

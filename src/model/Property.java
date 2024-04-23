@@ -8,9 +8,27 @@ public class Property {
     private String name;
     List<Value> values;
 
-    public Property(String name) {
+    public Property(int id,String name) {
+        this.id=id;
         this.name = name;
         this.values=new ArrayList<>();
+    }
+
+
+
+
+
+    @Override
+    public String toString() {
+        return "Property{" +
+                "name='" + name + '\'' +
+                ", values=" +values +
+                '}';
+    }
+
+    public void addValue(Value value){
+        values.add(value);
+
     }
 
     public int getId() {

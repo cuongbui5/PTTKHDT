@@ -4,7 +4,8 @@ public class Value {
     private int id;
     private String data;
 
-    public Value(String data) {
+    public Value(int id,String data) {
+        this.id=id;
         this.data = data;
     }
 
@@ -17,6 +18,11 @@ public class Value {
     }
 
     public String getData() {
+        return data;
+    }
+
+    @Override
+    public String toString() {
         return data;
     }
 
